@@ -5,11 +5,13 @@ import { ShimmerButtonDemo } from './components/ShimmerButtonDemo';
 import Moveupcards from './components/Moveupcards';
 import { InfiniteMovingCardsDemo } from './components/InfiniteMovingCards';
 import { FooterComp } from './components/FooterComp';
+import {Bannercomp} from './components/Banner';
 
 function App() {
   return (
     <div className="bg-[#f0f8ff]">
       <Navbarcomp/>
+      <Bannercomp/>
       <div className="relative flex flex-col-reverse md:flex-row-reverse justify-between h-[40rem]">
         {/* Image for mobile (visible only on small screens) */}
         <div className="md:hidden flex justify-center items-center">

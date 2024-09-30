@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import ProductDetail from './ProductDetail';  // Assuming you already have this component
+import { Navbarcomp } from './NavbarComp';
 
 const ProductDetailPage: React.FC = () => {
   const location = useLocation();
@@ -12,6 +13,7 @@ const ProductDetailPage: React.FC = () => {
 
   return (
     <div>
+      <Navbarcomp/>
       <h1 className='text-4xl font-bold text-center tracking-[-0.02em] md:text-6xl md:leading-[5rem] text-[#171717] my-8' style={{ fontFamily: 'Cabinet Grotesk, sans-serif' }}>
   Explore Your Product
 </h1>

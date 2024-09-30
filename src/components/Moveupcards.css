@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    width: 320px;
+    height: 520px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+    overflow: hidden; /* To hide overflowed content */
+}
+
+.container .card .box {
+    position: absolute;
+    top: 0; /* Aligns the box to the top */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes title and button to the bottom */
+    align-items: center;
+    transition: 0.5s;
+    padding: 20px; /* Add some padding */
+}
+
+.container .card:hover .box {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area */
+    border-radius: 15px; /* Match card border radius */
+}
+
+.container .card .box .content {
+    text-align: center;
+    position: relative; /* Allows absolute positioning of button */
+}
+
+.container .card .box .content h3 {
+    z-index: 1; /* Adds margin for spacing */
+}
+
+.container .card .box .content .shop-now {
+    position: absolute;
+    bottom: 20px; /* Positioning button above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #03a9f4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.container .card:hover .box .content .shop-now {
+    opacity: 1; /* Show the button on hover */
+}
+
+.container .card .box .content p {
+    font-size: 1em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+}
+
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p {
+    color: #fff; /* Change text color on hover */
+}
+
+.container .card:hover .box .content .shop-now {
+    background: #ff568f; /* Change button color on hover */
+}
